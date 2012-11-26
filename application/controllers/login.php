@@ -1,7 +1,7 @@
 <?php
-class Login extends Controller {
+class Login extends CI_Controller {
 
-	function index()
+	public function index()
 	{
 		$this->load->view('login');
 	}

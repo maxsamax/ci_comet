@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Login in..</title>
-	<link rel="stylesheet" type="text/css" href="../src/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="application/src/css/bootstrap.css" />
 	<style type="text/css">
 		#centerer{
 			width:15%;
