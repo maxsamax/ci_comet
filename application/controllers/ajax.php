@@ -1,27 +1,19 @@
 <?php
 
 class Ajax extends CI_Controller {
+	public function check_user()
+  	{
+//		$this->load->model('user_auth', '', TRUE);
+	    $username = trim($_REQUEST['username']);
+	    $password = trim($_REQUEST['password']);
 
-  public function Ajax() {
-  
-    parent::CI_Controller(); 
-  }
-
-  public function check_user()
-  {
-//    $this->load->model('MUser', '', TRUE);
-    $username = trim($_POST['username']);
-    $password = trim($_POST['password']);
-    // если такое имя пользователя существует, возвращаем 1
-/*    if ($this->MUser->username_exists($username)) {
-      echo '1';
-    }*/
-	if ($this->redis->get($username)==$password) {
-		echo ololo;
+	if ($this->redis->get($username) == $password) {
+		$this->load->view('main');
+	}else {
+		echo "$username\'s password incorrect. Try again!";
 	};
   }
 
 }
 
-/* End of file ajax.php */
-/* Location: ./system/application/controllers/ajax.php */
+?>
