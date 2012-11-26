@@ -10,7 +10,7 @@ class Ajax extends CI_Controller {
 	if ($this->redis->get($username) == $password) {
 		$this->load->view('main');
 	}else {
-		echo "$username\'s password incorrect. Try again!";
+		echo "$username's password incorrect. Try again!";
 	};
   }
 
