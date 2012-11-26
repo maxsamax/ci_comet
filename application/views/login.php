@@ -13,6 +13,7 @@
 			width: 100%;
 		}
 	</style>
+
 	<script type="text/javascript" src="application/src/js/jquery.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -20,8 +21,8 @@
 				var ajaxdata = {},
 				loginForm = $(e.target).parent("form");
 debugger;
-				ajaxdata.username = $(loginForm).children("input[type=text]");
-				ajaxdata.password = $(loginForm).children("input[type=password]");
+				ajaxdata.username = $(loginForm).children("input[type=text]").val();
+				ajaxdata.password = $(loginForm).children("input[type=password]").val();
 				
 				console.log(ajaxdata);
 				
