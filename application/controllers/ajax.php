@@ -13,7 +13,17 @@ class Ajax extends CI_Controller {
 		echo "$username's password incorrect. Try again!";
 	};
   }
+	public function reg_user()
+	  	{
+	//		$this->load->model('user_auth', '', TRUE);
+		    $username = trim($_REQUEST['username']);
+		    $password = trim($_REQUEST['password']);
 
+			$this->redis->set($username, $password);
+
+			$this->load->view('main');			
+		};
+	  }
 }
 
 ?>
