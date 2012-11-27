@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Register</title>
-	<link rel="stylesheet" type="text/css" href="application/src/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="http://localhost/ci_comet/application/src/css/bootstrap.css" />
 	<style type="text/css">
 		#centerer{
 			width:15%;
@@ -14,20 +14,20 @@
 		}
 	</style>
 
-	<script type="text/javascript" src="application/src/js/jquery.js"></script>
+	<script type="text/javascript" src="http://localhost/ci_comet/application/src/js/jquery.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function () {
-			$("#send_login").click(function(e) {
+			$("#send_reg").click(function(e) {
 				var ajaxdata = {},
 				regForm = $(e.target).parent().parent("form");
 
-				ajaxdata.username = $(loginForm).children().children("input[type='text']").val();
-				if ($(loginForm).children().children("#pass").val() == $(loginForm).children().children("#confirm").val()) {
+				ajaxdata.username = $(regForm).children().children("input[type='text']").val();
+				if ($(regForm).children().children("#pass").val() == $(regForm).children().children("#confirm").val()) {
 
-					ajaxdata.password = $(loginForm).children().children("input[type='password']").val();
+					ajaxdata.password = $(regForm).children().children("input[type='password']").val();
 					console.log(ajaxdata);
 					$.ajax({
-						url:"index.php/ajax/reg_user", 
+						url:"http://localhost/ci_comet/index.php/ajax/reg_user", 
 						data: ajaxdata,
 						type: "POST",
 						error: function (mes) {
@@ -35,7 +35,7 @@
 							}
 						});
 				}
-			});			
+			});
 		})
 	</script>
 </head>

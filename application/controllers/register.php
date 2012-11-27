@@ -1,5 +1,5 @@
 <?php
-class Login extends CI_Controller {
+class Register extends CI_Controller {
 
 	public function index()
 	{

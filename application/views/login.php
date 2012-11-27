@@ -1,6 +1,4 @@
-<!DOCTYPE HTML>
-<html>
-<head>
+<!DOCTYPE HTML> <html> <head>
 	<title>Login in..</title>
 	<link rel="stylesheet" type="text/css" href="application/src/css/bootstrap.css" />
 	<style type="text/css">
@@ -56,7 +54,7 @@
 					<button type="button" id="cancel_clear" class="btn">Cancel</button>
 				</div>
 				<div>
-					<a href="ci_comet/register"><i>Register form</i></a>
+					<a href="index.php/register"><i>Register form</i></a>
 				</div>
 
 			</form>
